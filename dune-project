@@ -16,5 +16,5 @@
  (depends ocaml dune))
 
 (package
- (name emlin-gpio-sysfs)
+ (name emlin-sysfs)
  (depends ocaml dune emlin))

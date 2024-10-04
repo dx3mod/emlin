@@ -1,0 +1,3 @@
+(executable
+ (name example_blinly)
+ (libraries emlin emlin-sysfs unix))

@@ -1,0 +1,4 @@
+(library
+ (name emlin_sysfs)
+ (public_name emlin-sysfs)
+ (libraries emlin))

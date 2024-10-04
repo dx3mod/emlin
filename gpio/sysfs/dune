@@ -1,0 +1,4 @@
+(library
+ (name gpio)
+ (public_name emlin-gpio-sysfs)
+ (libraries emlin))

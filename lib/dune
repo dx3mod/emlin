@@ -1,2 +1,5 @@
 (library
- (public_name emlin))
+ (public_name emlin)
+ (foreign_stubs
+  (language c)
+  (names i2c_stub)))

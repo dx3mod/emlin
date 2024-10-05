@@ -43,10 +43,17 @@ module Mock () : S = struct
   let export num =
     if List.exists (( = ) num) !exported then
       failwith @@ Printf.sprintf "pin %d already exported!" num
-    else exported := num :: !exported
+    else exported := num :: !exported;
+    Printf.printf "export %d\n" num
 
-  let unexport num = exported := List.filter (( <> ) num) !exported
-  let set_direction _ _ = ()
-  let set_value _ _ = ()
-  let get_value _ = 1
+  let unexport num =
+    exported := List.filter (( <> ) num) !exported;
+    Printf.printf "unexport %d\n" num
+
+  let set_direction = Printf.printf "set_direction %d %s\n"
+  let set_value = Printf.printf "set_value %d %d\n"
+
+  let get_value num =
+    Printf.printf "get_value %d\n" num;
+    Random.int_in_range ~min:0 ~max:1
 end

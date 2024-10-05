@@ -6,5 +6,6 @@ let () =
 
   while true do
     Gpio.toggle led_pin;
-    Unix.sleep 1
+    Unix.sleep 1;
+    flush_all ()
   done

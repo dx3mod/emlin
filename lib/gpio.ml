@@ -1,5 +1,7 @@
 module Pin = struct
   type 'mode t = { pin_num : int }
+
+  let pp fmt t = Format.fprintf fmt "Pin(%d)" t.pin_num
 end
 
 module Direction = struct

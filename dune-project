@@ -14,7 +14,3 @@
 (package
  (name emlin)
  (depends ocaml dune))
-
-(package
- (name emlin-sysfs)
- (depends ocaml dune emlin))

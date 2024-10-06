@@ -33,7 +33,7 @@ module Make (B : Backend) : S = struct
   let close_all () = List.iter B.close !open_fds
 end
 
-module Unsafe : Backend = struct
+module Hardware : Backend = struct
   external init : int -> int -> int = "caml_i2c_init"
   external close : int -> unit = "caml_i2c_close"
   external write : int -> bytes -> int -> int = "caml_i2c_write"

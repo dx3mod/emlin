@@ -1,7 +1,6 @@
 # Emlin
 
-An OCaml solution that provides access to Linux hardware interfaces (such as GPIO, I2C, etc.)
-and other peripherals from userspace. 
+An OCaml library that provides access to Linux hardware interfaces, including GPIO, I2C, and other peripherals, making it easier to develop embedded systems from userspace.
 
 > [!WARNING]
 > Now in active development!
@@ -11,6 +10,7 @@ and other peripherals from userspace.
     - [ ] Input/Output
     - [ ] Interrupts
 - [ ] I2C 
+- [ ] 1Wire
 
 **Drivers**
 - [ ] ssd1306

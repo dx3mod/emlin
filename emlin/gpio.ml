@@ -20,17 +20,19 @@ module Make (Sf : Sysfs.S) : S = struct
 
   let pin (type a) ?init num (dir : a Direction.t) : a =
     let pin = Pin.{ pin_num = num } in
-    (* fix it  *)
-    exported := pin :: !exported;
     match dir with
     | In ->
         Sf.set_direction num "in";
+        exported := pin :: !exported;
+
         pin
     | Out ->
         (match init with
         | Some x when x >= 1 -> Sf.set_direction num "high"
         | Some 0 -> Sf.set_direction num "low"
         | _ -> Sf.set_direction num "out");
+        exported := pin :: !exported;
+
         pin
 
   let get_value (pin : [> ] Pin.t) = Sf.get_value pin.pin_num [@@inline]

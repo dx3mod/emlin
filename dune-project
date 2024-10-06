@@ -14,3 +14,7 @@
 (package
  (name emlin)
  (depends ocaml dune))
+
+(package
+ (name emlin-ssd1306)
+ (depends ocaml dune emlin))

@@ -6,7 +6,7 @@ module type S = sig
   val get_value : int -> int
 end
 
-module Real : S = struct
+module Hardware : S = struct
   (* TODO: implement caching *)
 
   let export num =

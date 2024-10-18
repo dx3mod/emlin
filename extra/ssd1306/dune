@@ -1,4 +1,4 @@
 (library
  (name ssd1306)
- (public_name emlin-ssd1306)
+ (public_name emlin-extra-ssd1306)
  (libraries emlin))

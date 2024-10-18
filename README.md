@@ -7,7 +7,7 @@ An OCaml library that provides access to Linux hardware interfaces, including GP
 
 **Base**
 - [ ] GPIO Sysfs
-    - [ ] Input/Output
+    - [X] Input/Output
     - [ ] Interrupts
 - [ ] I2C 
 - [ ] 1Wire
@@ -25,6 +25,24 @@ $ opam pin https://github.com/dx3mod/emlin.git
 ## Usage
 
 See [`examples/`](./examples/).
+
+### Blink 
+
+Turn an LED on and off every second.
+
+```ocaml
+let () =
+  Emlin.with_sysfs_gpio @@ fun (module Gpio) ->
+
+  let led_pin = Gpio.export 74 Output in
+
+  while true do
+    Gpio.write led_pin High;
+    Unix.sleep 1;
+    Gpio.write led_pin Low;
+    Unix.sleep 1
+  done
+```
 
 ## Contribution
 

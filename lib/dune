@@ -3,3 +3,5 @@
  (foreign_stubs
   (language c)
   (names i2c_stub)))
+
+(include_subdirs qualified)

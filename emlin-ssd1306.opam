@@ -7,7 +7,7 @@ homepage: "https://github.com/dx3mod/emlin"
 bug-reports: "https://github.com/dx3mod/emlin/issues"
 depends: [
   "ocaml"
-  "dune" {>= "3.6"}
+  "dune" {>= "3.7"}
   "emlin"
   "odoc" {with-doc}
 ]

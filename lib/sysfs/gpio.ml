@@ -1,3 +1,6 @@
+(** It must die.
+    @deprecated *)
+
 module Pin = struct
   type 'mode t = { num : int }
 

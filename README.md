@@ -6,8 +6,8 @@ An OCaml library that provides access to Linux hardware interfaces, including GP
 > Now in active development!
 
 **Base**
-- [ ] GPIO Sysfs
-    - [X] Input/Output
+- [ ] Sysfs
+    - [X] ~~GPIO~~ (deprecated)
     - [ ] Interrupts
 - [ ] I2C 
 - [ ] 1Wire

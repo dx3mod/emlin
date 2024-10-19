@@ -1,4 +1,4 @@
-module type Backend = sig
+module type Interface = sig
   val init : int -> int -> int
   val close : int -> unit
   val write : int -> bytes -> int -> int
@@ -19,7 +19,7 @@ module type S = sig
   val close_all : unit -> unit
 end
 
-module Make (B : Backend) : S = struct
+module Make (B : Interface) : S = struct
   let open_fds : int list ref = ref []
 
   let init ~bus_num ~addr =
@@ -33,7 +33,7 @@ module Make (B : Backend) : S = struct
   let close_all () = List.iter B.close !open_fds
 end
 
-module Hardware : Backend = struct
+module Hardware : Interface = struct
   external init : int -> int -> int = "caml_i2c_init"
   external close : int -> unit = "caml_i2c_close"
   external write : int -> bytes -> int -> int = "caml_i2c_write"

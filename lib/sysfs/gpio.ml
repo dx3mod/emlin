@@ -1,6 +1,3 @@
-(** It must die.
-    @deprecated *)
-
 module Pin = struct
   type 'mode t = { num : int }
 
@@ -8,7 +5,7 @@ module Pin = struct
 end
 
 module Direction = struct
-  type _ t = Input : [ `Input ] t | Output : [ `Output ] t
+  type _ t = In : [ `Input ] t | Out : [ `Output ] t
 end
 
 module Signal = struct
@@ -44,10 +41,10 @@ module Make (I : Interface) : S = struct
     Dynarray.add_last exported_pins pin_num;
 
     match mode with
-    | Input ->
+    | In ->
         I.set_direction pin_num "in";
         Pin.{ num = pin_num }
-    | Output ->
+    | Out ->
         I.set_direction pin_num "out";
         Pin.{ num = pin_num }
 

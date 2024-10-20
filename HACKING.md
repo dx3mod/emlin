@@ -12,3 +12,4 @@ This document describes some internals details to help you dive into the source 
 - Articles
     - [GPIO Sysfs Interface for Userspace](https://www.kernel.org/doc/Documentation/gpio/sysfs.txt)
     - [GPIO Character Device Userspace API](https://docs.kernel.org/userspace-api/gpio/chardev.html)
+    - [Subsystem drivers using GPIO](https://docs.kernel.org/driver-api/gpio/drivers-on-gpio.html)

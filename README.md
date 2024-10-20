@@ -2,9 +2,6 @@
 
 An OCaml library that provides access to Linux hardware interfaces, including GPIO, I2C, and other peripherals, making it easier to develop embedded systems from userspace.
 
-> [!WARNING]
-> Now in active development!
-
 **Base**
 - [ ] Sysfs
     - [X] GPIO

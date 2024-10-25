@@ -1,5 +1,6 @@
 (** Control GPIO via gpiofs.
     @deprecated
+    @see <https://www.kernel.org/doc/Documentation/gpio/sysfs.txt> lox
 
     {[
       let module Gpio = Sysfs.Gpio.Make (Sysfs.Gpio.Hardware) in
